@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "clock-yegli:build:production"
+              "buildTarget": "clock-yegli:build:production"
             },
             "development": {
-              "browserTarget": "clock-yegli:build:development"
+              "buildTarget": "clock-yegli:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "clock-yegli:build"
+            "buildTarget": "clock-yegli:build"
           }
         },
         "test": {
