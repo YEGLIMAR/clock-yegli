@@ -1,0 +1,8 @@
+<div class="sidebar">
+  <button 
+    *ngFor="let mode of modes" 
+    (click)="selectMode(mode)" 
+    [ngClass]="{'selected': selectedMode === mode.key}">
+    {{ mode.label }}
+  </button>
+</div>
