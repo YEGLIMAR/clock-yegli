@@ -6,17 +6,20 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  @Output() modeSelected = new EventEmitter<string>();
 
   modes = [
-    { key: 'simpleClock', label: 'Reloj Sencillo' },
-    { key: 'dayNightClock', label: 'Reloj día-noche' },
+    { key: 'sencillo', label: 'Reloj Sencillo' },
+    { key: 'digital', label: 'Reloj digital'},
+    { key: 'analogico', label: 'Reloj analógico'},
+    { key: 'hexagonal', label: 'Reloj hexagonal'}
   ];
 
-  selectedMode: string = 'simpleClock';
+  selectedMode= 'sencillo';
 
-  selectMode(mode: any): void {
+  @Output() modeChange = new EventEmitter<string>();
+
+  selectMode(mode: any){
     this.selectedMode = mode.key;
-    this.modeSelected.emit(this.selectedMode);
+    this.modeChange.emit(this.selectedMode);
   }
 }

@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'clock-yegli';
-  selectedMode: string = 'simple';
+  currentMode = 'sencillo';
 
-  onModeSelected(mode: string) {
-    this.title= 'clock-yegli';
-    this.selectedMode = mode;
+
+  onModeChange(mode: string): void {
+    this.currentMode = mode;
+
+
   }
 }

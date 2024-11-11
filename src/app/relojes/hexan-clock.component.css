@@ -1,0 +1,32 @@
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  canvas {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .time-slider {
+    margin-top: 20px;
+    width: 200px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: linear-gradient(to right, #3e2723, #d4671e);
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .time-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3e2723;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  

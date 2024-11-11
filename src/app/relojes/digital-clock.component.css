@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'DS-Point';
+  src: url('/assets/DS-POINT.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.digital-clock {
+    font-family: "DS-Point";
+    font-size: 3rem;
+    color: #e98d7d;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .digit {
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .time-labels {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    margin-top: 10px;
+    color: #af3907;
+    font-size: 0.8rem;
+  }
+  
+  .time-slider {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+  
+  .time-slider input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: 20px;
+    width: 200px;
+    height: 8px;
+    background: linear-gradient(to right, #3e2723, #d4671e);
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .time-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3e2723;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  

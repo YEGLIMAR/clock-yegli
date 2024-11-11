@@ -1,5 +1,22 @@
-<div class="app-container">
-    <app-sidebar (modeSelected)="onModeSelected($event)"></app-sidebar>
-    <app-main-view [selectedMode]="selectedMode"></app-main-view>
-  </div>
+<h1 class="main-title">Visualizador de tiempo</h1>
+
+<!-- Sidebar para seleccionar el tipo de reloj -->
+<app-sidebar (modeChange)="onModeChange($event)"></app-sidebar>
+
+<!-- Mostrar el reloj correspondiente según el modo seleccionado -->
+<div *ngIf="currentMode === 'sencillo'">
+  <app-reloj-sencillo></app-reloj-sencillo>
+</div>
+
+<div *ngIf="currentMode === 'digital'">
+  <app-digital-clock></app-digital-clock>
+</div>
+
+<div *ngIf="currentMode === 'analogico'">
+  <app-analog-clock></app-analog-clock>
+</div>
+
+<div *ngIf="currentMode === 'hexagonal'">
+  <app-hexan-clock></app-hexan-clock>
   
+

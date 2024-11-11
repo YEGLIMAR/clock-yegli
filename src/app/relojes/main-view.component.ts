@@ -5,28 +5,12 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './main-view.component.html',
   styleUrls: ['./main-view.component.css']
 })
-export class MainViewComponent implements OnInit {
-  @Input() selectedMode: string = 'simple';
+export class MainViewComponent {
+  currentMode = 'sencillo';
 
-  currentTime: Date = new Date();
-  hourOffset: number = 0;
-
-  ngOnInit() {
-    this.updateRealTime();
+  onModeChange(newMode: string){
+    this.currentMode = newMode;
   }
 
-  updateRealTime() {
-    setInterval(() => {
-      const now = new Date();
-      now.setHours(now.getHours() + this.hourOffset);
-      this.currentTime = now;
-    }, 1000);
-  }
-
-  updateTime() {
-    const now = new Date();
-    now.setHours(now.getHours() + this.hourOffset);
-    this.currentTime = now;
-  }
 }
 

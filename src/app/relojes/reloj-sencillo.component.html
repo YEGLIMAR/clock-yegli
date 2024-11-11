@@ -1,6 +1,8 @@
-<div class="clock-display">
-  <h1>{{ currentTime | date:'h:mm:ss a' }}</h1>
-</div>
-<div class="time-slider">
-  <input type="range" min="-12" max="12" step="1" [(ngModel)]="timeOffset" (input)="adjustTime($event)" />
+<div class="clock-container">
+  <div class="clock-display">
+    <h1>{{ currentTime | date:'h:mm:ss a' }}</h1>
+  </div>
+  <div class="time-slider">
+    <input type="range" min="-12" max="12" step="1" [(ngModel)]="timeOffset" (input)="adjustTime($event)" />
+  </div>
 </div>

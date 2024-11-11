@@ -1,8 +1,13 @@
-<div class="main-view-container">
-    <h1 class="main-title">Visualizador de tiempo</h1>
-    <div class="time-display">{{ currentTime | date: 'h:mm:ss a' }}</div>
-    <div class="slider-container">
-      <input type="range" min="0" max="24" step="1" [(ngModel)]="hourOffset" (input)="updateTime()" />
+<div class="container">
+  <app-sidebar (modeChange)="onModeChange($event)"></app-sidebar>
+
+  <div class="content">
+    <h1 class="main-title">j</h1>
+
+    <div class="clock-display">
+      <ng-container [ngSwitch]="currentMode">
+        <app-reloj-sencillo *ngSwitchCase="'sencillo'"></app-reloj-sencillo>
+      </ng-container>
     </div>
   </div>
-  
+</div>

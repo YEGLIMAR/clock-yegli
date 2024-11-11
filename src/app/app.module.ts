@@ -10,15 +10,19 @@ import { FormsModule } from '@angular/forms';
 import { RelojSencilloComponent } from './relojes/reloj-sencillo.component';
 import { SidebarComponent } from './relojes/sidebar.component';
 import { MainViewComponent } from './relojes/main-view.component';
-import { DayNightClockComponent } from './relojes/day-night-clock.component';
-
+import { DigitalClockComponent } from './relojes/digital-clock.component';
+import { AnalogClockComponent } from './relojes/analog-clock.component';
+import { HexanClockComponent } from './relojes/hexan-clock.component';
 @NgModule({
   declarations: [
     AppComponent,
     RelojSencilloComponent,
     SidebarComponent,
     MainViewComponent,
-    DayNightClockComponent
+    DigitalClockComponent,
+    AnalogClockComponent,
+    HexanClockComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<div class="digital-clock">
+    <span class="digit">{{ currentTime | date: 'HH' }}</span> :
+    <span class="digit">{{ currentTime | date: 'mm' }}</span> :
+    <span class="digit">{{ currentTime | date: 'ss' }}</span>
+  </div>
+  <div class="time-labels">
+    <span>HOURS</span>
+    <span>MINUTES</span>
+    <span>SECONDS</span>
+  </div>
+  <div class="time-slider">
+    <input type="range" min="-12" max="12" step="1" [(ngModel)]="timeOffset" (input)="adjustTime($event)">
+  </div>
+  

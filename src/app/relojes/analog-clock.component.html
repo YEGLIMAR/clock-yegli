@@ -1,0 +1,4 @@
+<div class="clock-container">
+  <canvas #clockCanvas></canvas>
+  <input type="range" min="-12" max="12" step="1" [(ngModel)]="timeOffset" (input)="updateClock()" class="time-slider">
+</div>
