@@ -1,0 +1,28 @@
+<div class="page-clock">
+    <div class="page-unit">
+      <div class="page">
+        <div class="page-front">{{ currentHour }}</div>
+        <div class="page-back">{{ nextHour }}</div>
+      </div>
+      <label>Hours</label>
+    </div>
+    <div class="page-unit">
+      <div class="page">
+        <div class="page-front">{{ currentMinute }}</div>
+        <div class="page-back">{{ nextMinute }}</div>
+      </div>
+      <label>Minutes</label>
+    </div>
+    <div class="page-unit">
+      <div class="page">
+        <div class="page-front">{{ currentSecond }}</div>
+        <div class="page-back">{{ nextSecond }}</div>
+      </div>
+      <label>Seconds</label>
+    </div>
+    
+    <div class="time-slider">
+      <input type="range" min="-12" max="12" step="1" [(ngModel)]="timeOffset" (input)="adjustTime($event)" />
+    </div>
+  </div>
+  

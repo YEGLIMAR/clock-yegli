@@ -11,7 +11,9 @@ export class SidebarComponent {
     { key: 'sencillo', label: 'Reloj Sencillo' },
     { key: 'digital', label: 'Reloj digital'},
     { key: 'analogico', label: 'Reloj analógico'},
-    { key: 'hexagonal', label: 'Reloj hexagonal'}
+    { key: 'hexagonal', label: 'Reloj hexagonal'},
+    { key: 'escalera', label: 'Reloj escalera'},
+    { key: 'pagina', label: 'Página de reloj'}
   ];
 
   selectedMode= 'sencillo';

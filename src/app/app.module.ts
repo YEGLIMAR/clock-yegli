@@ -13,6 +13,8 @@ import { MainViewComponent } from './relojes/main-view.component';
 import { DigitalClockComponent } from './relojes/digital-clock.component';
 import { AnalogClockComponent } from './relojes/analog-clock.component';
 import { HexanClockComponent } from './relojes/hexan-clock.component';
+import { StairCaseClockComponent } from './relojes/stair-clock.component';
+import { PageClockComponent } from './relojes/page-clock.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { HexanClockComponent } from './relojes/hexan-clock.component';
     MainViewComponent,
     DigitalClockComponent,
     AnalogClockComponent,
-    HexanClockComponent
+    HexanClockComponent,
+    StairCaseClockComponent,
+    PageClockComponent
 
   ],
   imports: [

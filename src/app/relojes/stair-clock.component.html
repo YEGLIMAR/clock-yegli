@@ -1,0 +1,28 @@
+<div class="staircase-clock">
+  <div class="stair">
+    <div class="label">Hours</div>
+    <div class="bar" [style.width.%]="hourWidth">
+      <span class="time-value">{{ currentHour }} h</span>
+    </div>
+    <div class="percentage">{{ hourWidth | number:'1.0-0' }}%</div>
+  </div>
+  <div class="stair">
+    <div class="label">Minutes</div>
+    <div class="bar" [style.width.%]="minuteWidth">
+      <span class="time-value">{{ currentMinute }} m</span>
+    </div>
+    <div class="percentage">{{ minuteWidth | number:'1.0-0' }}%</div>
+  </div>
+  <div class="stair">
+    <div class="label">Seconds</div>
+    <div class="bar" [style.width.%]="secondWidth">
+      <span class="time-value">{{ currentSecond }} s</span>
+    </div>
+    <div class="percentage">{{ secondWidth | number:'1.0-0' }}%</div>
+  </div>
+
+  <!-- Slider para ajustar la hora -->
+  <div class="time-slider">
+    <input type="range" min="-12" max="12" step="1" [(ngModel)]="timeOffset" (input)="updateTime()" />
+  </div>
+</div>
