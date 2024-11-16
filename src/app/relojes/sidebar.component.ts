@@ -13,7 +13,9 @@ export class SidebarComponent {
     { key: 'analogico', label: 'Reloj analógico'},
     { key: 'hexagonal', label: 'Reloj hexagonal'},
     { key: 'escalera', label: 'Reloj escalera'},
-    { key: 'pagina', label: 'Página de reloj'}
+    { key: 'pagina', label: 'Página de reloj'},
+    { key: 'escrito', label: 'Reloj escrito'},
+    { key: 'termometro', label: 'Reloj termómetro'}
   ];
 
   selectedMode= 'sencillo';

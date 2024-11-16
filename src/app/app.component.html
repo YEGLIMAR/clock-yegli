@@ -28,5 +28,11 @@
   <app-page-clock></app-page-clock>
 </div>
 
+<div *ngIf="currentMode === 'escrito'">
+  <app-written-clock></app-written-clock>
+</div>
+
+<div *ngIf="currentMode === 'termometro'">
+  <app-thermo-clock></app-thermo-clock>
 
 

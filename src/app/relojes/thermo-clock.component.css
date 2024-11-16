@@ -1,0 +1,45 @@
+.thermometer-clock {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .thermometers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .thermometer {
+    width: 100px;
+    height: 200px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(252, 19, 19, 0.3);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 25px; /* Añadir espacio superior para las etiquetas */
+  }
+  
+  .level {
+    width: 100%;
+    transition: height 0.3s ease, background 0.3s ease;
+  }
+  
+  .label {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    width: 100%; /* Asegurar que la etiqueta ocupe todo el ancho */
+    padding: 5px 0; /* Añadir relleno para mayor visibilidad */
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  

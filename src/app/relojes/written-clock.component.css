@@ -1,0 +1,53 @@
+.written-clock-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.time-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.hours {
+  color: orange;
+  text-transform: uppercase;
+}
+
+.minutes {
+  color: magenta;
+  text-transform: uppercase;
+}
+
+.seconds {
+  color: red;
+  text-transform: uppercase;
+}
+
+.slider-container {
+  margin-top: 20px;
+}
+
+.custom-slider {
+  margin-top: 20px;
+  width: 200px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: linear-gradient(to right, #3e2723, #d4671e);
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Personalización del thumb */
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #3e2723;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+

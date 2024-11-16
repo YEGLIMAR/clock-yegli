@@ -1,0 +1,22 @@
+<div class="thermometer-clock">
+    <h2>Reloj Estilo Termómetro</h2>
+    <div class="thermometers">
+      <div class="thermometer">
+        <div class="level" [style.height.%]="(hours / 24) * 100" [style.background]="getColor(hours, 24)"></div>
+        <span class="label">Horas</span>
+      </div>
+      <div class="thermometer">
+        <div class="level" [style.height.%]="(minutes / 60) * 100" [style.background]="getColor(minutes, 60)"></div>
+        <span class="label">Minutos</span>
+      </div>
+      <div class="thermometer">
+        <div class="level" [style.height.%]="(seconds / 60) * 100" [style.background]="getColor(seconds, 60)"></div>
+        <span class="label">Segundos</span>
+      </div>
+    </div>
+    <div class="slider-container">
+      <label>Ajustar las horas</label>
+      <input type="range" min="0" max="23" step="1" [(ngModel)]="hourOffset" (input)="updateTime()" />
+    </div>
+  </div>
+  

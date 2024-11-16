@@ -1,0 +1,18 @@
+<div class="written-clock-container">
+  <h2>Hora en palabras:</h2>
+  <div class="time-text hours">Horas: {{ hoursInWords }}</div>
+  <div class="time-text minutes">Minutos: {{ minutesInWords }}</div>
+  <div class="time-text seconds">Segundos: {{ secondsInWords }}</div>
+
+  <div class="slider-container">
+    <label>Ajustar el tiempo</label>
+    <input
+      type="range"
+      min="0"
+      max="86399"
+      [value]="totalSeconds"
+      (input)="updateTotalSeconds($event)"
+      class="custom-slider"
+    />
+  </div>
+</div>
