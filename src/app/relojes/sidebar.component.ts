@@ -15,7 +15,7 @@ export class SidebarComponent {
     { key: 'escalera', label: 'Reloj escalera'},
     { key: 'pagina', label: 'Página de reloj'},
     { key: 'escrito', label: 'Reloj escrito'},
-    { key: 'termometro', label: 'Reloj termómetro'}
+    { key: 'termometro', label: 'Reloj termómetro'}  
   ];
 
   selectedMode= 'sencillo';
