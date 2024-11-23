@@ -4,9 +4,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environments';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-//import { LoginComponent } from './components/login/login.component';
-//import { RegisterComponent } from './components/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RelojSencilloComponent } from './relojes/reloj-sencillo.component';
 import { SidebarComponent } from './relojes/sidebar.component';
 import { MainViewComponent } from './relojes/main-view.component';
@@ -17,6 +15,8 @@ import { StairCaseClockComponent } from './relojes/stair-clock.component';
 import { PageClockComponent } from './relojes/page-clock.component';
 import { WrittenClockComponent } from './relojes/written-clock.component';
 import { ThermometerClockComponent } from './relojes/thermo-clock.component';
+import { LoginComponent } from './services/login.component';
+import { RegisterComponent } from './services/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,14 +29,17 @@ import { ThermometerClockComponent } from './relojes/thermo-clock.component';
     StairCaseClockComponent,
     PageClockComponent,
     WrittenClockComponent,
-    ThermometerClockComponent
+    ThermometerClockComponent, 
+    LoginComponent,
+    RegisterComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

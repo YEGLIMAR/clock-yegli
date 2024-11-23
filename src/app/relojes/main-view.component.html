@@ -1,13 +1,36 @@
-<div class="container">
+<!-- main-view.component.html -->
+<div>
   <app-sidebar (modeChange)="onModeChange($event)"></app-sidebar>
-
-  <div class="content">
-    <h1 class="main-title">j</h1>
-
-    <div class="clock-display">
-      <ng-container [ngSwitch]="currentMode">
-        <app-reloj-sencillo *ngSwitchCase="'sencillo'"></app-reloj-sencillo>
-      </ng-container>
-    </div>
+  
+  <div *ngIf="currentMode === 'sencillo'">
+    <app-reloj-sencillo></app-reloj-sencillo>
   </div>
+
+  <div *ngIf="currentMode === 'digital'">
+    <app-digital-clock></app-digital-clock>
+  </div>
+
+  <div *ngIf="currentMode === 'analogico'">
+    <app-analog-clock></app-analog-clock>
 </div>
+
+<div *ngIf="currentMode === 'hexagonal'">
+<app-hexan-clock></app-hexan-clock>
+</div>
+
+<div *ngIf="currentMode === 'escalera'">
+  <app-stair-clock></app-stair-clock>
+</div>
+
+<div *ngIf="currentMode === 'pagina'">
+  <app-page-clock></app-page-clock>
+</div>
+
+<div *ngIf="currentMode === 'escrito'">
+  <app-written-clock></app-written-clock>
+</div>
+
+<div *ngIf="currentMode === 'termometro'">
+  <app-thermo-clock></app-thermo-clock>
+</div>
+

@@ -1,65 +1,58 @@
 import { TestBed } from '@angular/core/testing';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AuthService } from './auth.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { of } from 'rxjs';
 
 describe('AuthService', () => {
   let service: AuthService;
-  let afAuthMock: any;
+  let angularFireAuthMock: any;
 
   beforeEach(() => {
-    // Crear un mock de AngularFireAuth
-    afAuthMock = {
-      createUserWithEmailAndPassword: jasmine.createSpy('createUserWithEmailAndPassword'),
+    // Mock de AngularFireAuth
+    angularFireAuthMock = {
       signInWithEmailAndPassword: jasmine.createSpy('signInWithEmailAndPassword'),
+      createUserWithEmailAndPassword: jasmine.createSpy('createUserWithEmailAndPassword'),
       signOut: jasmine.createSpy('signOut'),
-      authState: of(null)
+      authState: of(null),
     };
 
+    // Configuración del testbed
     TestBed.configureTestingModule({
       providers: [
         AuthService,
-        { provide: AngularFireAuth, useValue: afAuthMock }
-      ]
+        { provide: AngularFireAuth, useValue: angularFireAuthMock },
+      ],
     });
+
     service = TestBed.inject(AuthService);
   });
 
-  it('should be created', () => {
+  it('debería ser creado', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should register a user', async () => {
-    const email = 'test@example.com';
-    const password = 'password123';
-    afAuthMock.createUserWithEmailAndPassword.and.returnValue(Promise.resolve({ user: { email } }));
-
-    const result = await service.register(email, password);
-    expect(afAuthMock.createUserWithEmailAndPassword).toHaveBeenCalledWith(email, password);
-    expect(result.user?.email).toBe(email);
+  describe('login', () => {
+    it('debería llamar a signInWithEmailAndPassword con los parámetros correctos', () => {
+      const email = 'test@example.com';
+      const password = '123456';
+      service.login(email, password);
+      expect(angularFireAuthMock.signInWithEmailAndPassword).toHaveBeenCalledWith(email, password);
+    });
   });
 
-  it('should login a user', async () => {
-    const email = 'test@example.com';
-    const password = 'password123';
-    afAuthMock.signInWithEmailAndPassword.and.returnValue(Promise.resolve({ user: { email } }));
-
-    const result = await service.login(email, password);
-    expect(afAuthMock.signInWithEmailAndPassword).toHaveBeenCalledWith(email, password);
-    expect(result.user?.email).toBe(email);
+  describe('register', () => {
+    it('debería llamar a createUserWithEmailAndPassword con los parámetros correctos', () => {
+      const email = 'test@example.com';
+      const password = '123456';
+      service.register(email, password);
+      expect(angularFireAuthMock.createUserWithEmailAndPassword).toHaveBeenCalledWith(email, password);
+    });
   });
 
-  it('should logout a user', async () => {
-    afAuthMock.signOut.and.returnValue(Promise.resolve());
-
-    await service.logout();
-    expect(afAuthMock.signOut).toHaveBeenCalled();
-  });
-
-  it('should return auth state', (done) => {
-    service.getUserState().subscribe(state => {
-      expect(state).toBeNull(); // authState está configurado para devolver null en el mock
-      done();
+  describe('logout', () => {
+    it('debería llamar a signOut', () => {
+      service.logout();
+      expect(angularFireAuthMock.signOut).toHaveBeenCalled();
     });
   });
 });

@@ -1,12 +1,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCclQpM-VhDx83rQSEYslA3UAyywXmE_n0",
-    authDomain: "proyecto-2-75b69.firebaseapp.com",
-    projectId: "proyecto-2-75b69",
-    storageBucket: "proyecto-2-75b69.firebasestorage.app",
-    messagingSenderId: "836979637928",
-    appId: "1:836979637928:web:30ac1c94a42e09487c0c9d",
-    measurementId: "G-WYV6YT09HT"
+    apiKey: "AIzaSyBbViRz_9QX2Hxrcwhg4kxDOGZAMEvcAxw",
+    authDomain: "clock-yegli.firebaseapp.com",
+    projectId: "clock-yegli",
+    storageBucket: "clock-yegli.firebasestorage.app",
+    messagingSenderId: "381385092375",
+    appId: "1:381385092375:web:87592c921c04818a899b52",
+    measurementId: "G-F2ZC9XE99T"
   }
 };

@@ -1,8 +1,10 @@
 <div class="sidebar">
+  <h2 class= "sidebar-title"> Visualizador de tiempo </h2>
+  <button class="sidebar-button" (click)="onLogout()">Cerrar sesión</button>
   <button 
     *ngFor="let mode of modes" 
     (click)="selectMode(mode)" 
     [ngClass]="{'selected': selectedMode === mode.key}">
     {{ mode.label }}
   </button>
-</div>
+  
