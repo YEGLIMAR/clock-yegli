@@ -34,3 +34,15 @@
   <app-thermo-clock></app-thermo-clock>
 </div>
 
+<div *ngIf="currentMode === 'domino'">
+  <app-domino-clock></app-domino-clock>
+</div>
+
+<div *ngIf="currentMode === 'vela'">
+  <app-candle-clock></app-candle-clock>
+</div>
+
+<div *ngIf="currentMode === 'ajedrez'">
+  <app-chess-clock></app-chess-clock>
+</div>
+

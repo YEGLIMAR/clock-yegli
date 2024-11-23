@@ -1,0 +1,59 @@
+<div class="domino-clock">
+    <div class="domino-section">
+      <div class="domino-label">Horas</div>
+      <div class="domino-row">
+        <div
+          class="domino"
+          *ngFor="let value of hourValues; index as i"
+          [class.active]="currentHours > i"
+        ></div>
+      </div>
+    </div>
+  
+    <div class="domino-section">
+      <div class="domino-label">Minutos</div>
+      <div class="domino-row">
+        <div
+          class="domino"
+          *ngFor="let value of minuteValues; index as i"
+          [class.active]="currentMinutes > i"
+        ></div>
+      </div>
+    </div>
+  
+    <div class="domino-section">
+      <div class="domino-label">Segundos</div>
+      <div class="domino-row">
+        <div
+          class="domino"
+          *ngFor="let value of secondValues; index as i"
+          [class.active]="currentSeconds > i"
+        ></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="slider-container">
+    <input
+      type="range"
+      min="0"
+      max="23"
+      [(ngModel)]="sliderHours"
+      (input)="adjustTime()"
+    />
+    <input
+      type="range"
+      min="0"
+      max="59"
+      [(ngModel)]="sliderMinutes"
+      (input)="adjustTime()"
+    />
+    <input
+      type="range"
+      min="0"
+      max="59"
+      [(ngModel)]="sliderSeconds"
+      (input)="adjustTime()"
+    />
+  </div>
+  

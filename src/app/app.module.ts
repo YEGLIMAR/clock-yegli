@@ -17,6 +17,9 @@ import { WrittenClockComponent } from './relojes/written-clock.component';
 import { ThermometerClockComponent } from './relojes/thermo-clock.component';
 import { LoginComponent } from './services/login.component';
 import { RegisterComponent } from './services/register.component';
+import { DominoClockComponent } from './relojes/domino-clock.component';
+import { CandleClockComponent } from './relojes/candle-clock.component';
+import { ChessClockComponent } from './relojes/chess-clock.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,10 @@ import { RegisterComponent } from './services/register.component';
     WrittenClockComponent,
     ThermometerClockComponent, 
     LoginComponent,
-    RegisterComponent
+    RegisterComponent, 
+    DominoClockComponent,
+    CandleClockComponent,
+    ChessClockComponent
 
   ],
   imports: [

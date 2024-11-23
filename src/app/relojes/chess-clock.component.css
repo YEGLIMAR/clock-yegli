@@ -1,0 +1,40 @@
+.chess-board {
+    display: grid;
+    grid-template-columns: repeat(12, 50px);
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .cell {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+  }
+  
+  .cell:nth-child(odd) {
+    background-color: #e0e0e0;
+  }
+  
+  .cell.active-hour {
+    background-color: #ff6868;
+    color: white;
+  }
+  
+  .cell.active-minute {
+    background-color: #68aaff;
+    color: white;
+  }
+  
+  .cell.active-second {
+    background-color: #ffd868;
+    color: black;
+  }
+  

@@ -1,0 +1,23 @@
+<div class="candle-clock">
+    <div class="candle-container">
+      <!-- Candle for Hours -->
+      <div class="candle">
+        <div class="flame"></div>
+        <div class="wax" [style.height]="100 - hoursPercentage + '%'"></div>
+        <span class="label">Horas</span>
+      </div>
+      <!-- Candle for Minutes -->
+      <div class="candle">
+        <div class="flame"></div>
+        <div class="wax" [style.height]="100 - minutesPercentage + '%'"></div>
+        <span class="label">Minutos</span>
+      </div>
+      <!-- Candle for Seconds -->
+      <div class="candle">
+        <div class="flame"></div>
+        <div class="wax" [style.height]="100 - secondsPercentage + '%'"></div>
+        <span class="label">Segundos</span>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,9 @@
+<div class="chess-board">
+    <div
+      *ngFor="let cell of [].constructor(144); let index = index"
+      [class]="getCellClass(index)"
+    >
+      <span *ngIf="getCellValue(index)">{{ getCellValue(index) }}</span>
+    </div>
+  </div>
+  
